@@ -1,0 +1,71 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #87ceeb, #f0f4f8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#weather-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+#cityInput {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#cityInput:focus {
+  border-color: #007BFF;
+}
+
+#searchBtn {
+  padding: 10px 18px;
+  font-size: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#searchBtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+#weatherResult {
+  margin-top: 20px;
+  background-color: #e6f0ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+#weatherResult h2 {
+  margin: 0 0 10px;
+}
+
+#weatherResult p {
+  margin: 6px 0;
+  font-size: 16px;
+}
