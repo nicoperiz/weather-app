@@ -1,24 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Weather App</h1>
 
-  <h1>Weather App</h1>
+    <div id="weather-container">
+      <input type="text" id="cityInput" placeholder="Inserisci città" />
+      <button id="searchBtn">Cerca</button>
 
-  <div id="weather-container">
-    <input type="text" id="cityInput" placeholder="Inserisci città">
-    <button id="searchBtn">Cerca</button>
-
-    <div id="weatherResult">
-      <!-- Qui appariranno i dati del meteo -->
+      <div id="weatherResult">
+        <!-- Qui appariranno i dati del meteo -->
+      </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

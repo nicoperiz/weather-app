@@ -1,62 +1,38 @@
 # Weather App 🌤️
 
-Semplice applicazione meteo sviluppata come esercizio pratico utilizzando HTML, CSS e JavaScript vanilla.
-
-L'app consente di cercare una città e visualizzare le condizioni meteo attuali tramite le API di OpenWeatherMap.
-
----
-
-## 🚀 Funzionalità
-
-- Ricerca meteo per nome città
-- Visualizzazione di:
-  - temperatura
-  - descrizione meteo
-  - umidità
-- Supporto per città con nomi uguali usando il formato:
-
-  città, codice_paese
-
-  Esempi:
-  - Roma, IT
-  - Sagres, PT
+A weather application built with HTML, CSS, and vanilla JavaScript.
+Search any city to get current conditions and a 5-day forecast.
 
 ---
 
-## 🛠️ Tecnologie utilizzate
+## 🚀 Features
+
+- Automatic weather detection based on your location
+- City search by name
+- Current conditions: temperature, humidity, wind speed
+- 5-day forecast with min/max temperatures
+- Dynamic background color based on weather condition
+- Enter key support
+
+---
+
+## 🛠️ Tech Stack
 
 - HTML
 - CSS
 - JavaScript (Vanilla)
-- OpenWeatherMap API
+- [Open-Meteo API](https://open-meteo.com/) — weather data (no API key required)
+- [Nominatim / OpenStreetMap](https://nominatim.openstreetmap.org/) — city geocoding (no API key required)
 
 ---
 
-## 🔑 API Key (Importante)
+## 📌 Notes
 
-Per motivi di sicurezza la API key non è inclusa nel repository.
-
-Per testare l'app:
-
-1. Registrarsi su https://openweathermap.org/
-2. Ottenere una API key gratuita
-3. Aprire il file `script.js`
-4. Sostituire la riga:
-
-   const API_KEY = "YOUR_API_KEY";
-
-   con la propria API key personale
+No API keys needed — both APIs are free and open.
+No frameworks or external libraries used.
 
 ---
 
-## 📌 Note
-
-Questo progetto è pensato come esercizio di apprendimento e fa parte di un portfolio iniziale.  
-Non utilizza framework o librerie esterne.
-
----
-
-## 👤 Autore
+## 👤 Author
 
 Nico Periz
-Esercizio pratico di JavaScript e utilizzo API
