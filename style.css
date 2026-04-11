@@ -4,19 +4,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  min-height: 100vh;
+  padding: 5px 20px 40px;
 }
 
 h1 {
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 #weather-container {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px 30px;
+  padding: 16px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   width: 100%;
   max-width: 400px;
   text-align: center;
@@ -56,9 +59,8 @@ h1 {
 }
 
 #weatherResult {
-  margin-top: 20px;
-  background-color: #e6f0ff;
-  padding: 15px 20px;
+  margin-top: 12px;
+  padding: 12px 16px;
   border-radius: 10px;
   transition: background-color 0.3s;
   min-height: 20px;
@@ -111,4 +113,57 @@ h1 {
 
 #weatherResult:has(> :only-child) {
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.welcome .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.locating {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.dot-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #007bff;
+  animation: bounce 1.2s infinite;
+}
+
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+.locating p {
+  font-size: 0.85rem;
+  color: #555;
 }

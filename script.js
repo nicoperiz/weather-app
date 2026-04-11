@@ -16,18 +16,38 @@ button.addEventListener("click", () => {
 });
 
 window.addEventListener("load", () => {
-  if (!navigator.geolocation) return;
+  result.style.backgroundColor = "transparent";
+  result.innerHTML = `
+    <div class="locating">
+      <div class="dot-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <p>Rilevamento posizione in corso...</p>
+    </div>
+  `;
+
+  if (!navigator.geolocation) {
+    showWelcome();
+    return;
+  }
+
   navigator.geolocation.getCurrentPosition(
-    (pos) =>
-      fetchWeather(
-        pos.coords.latitude,
-        pos.coords.longitude,
-        "La tua posizione",
-        "",
-      ),
-    () => {},
+    (pos) => fetchWeather(pos.coords.latitude, pos.coords.longitude, "La tua posizione", ""),
+    () => showWelcome()
   );
 });
+
+function showWelcome() {
+  result.style.backgroundColor = "transparent";
+  result.innerHTML = `
+    <div class="welcome">
+      <div class="icon">🌤️</div>
+      <p>Cerca una città per vedere<br>il meteo in tempo reale</p>
+    </div>
+  `;
+}
 
 function setLoading(isLoading) {
   button.disabled = isLoading;
@@ -35,7 +55,12 @@ function setLoading(isLoading) {
 }
 
 function showError(message) {
-  result.innerText = message;
+  result.innerHTML = `
+    <div class="welcome">
+      <div class="icon">🌤️</div>
+      <p>${message}</p>
+    </div>
+  `;
   result.style.backgroundColor = "#f8d7da";
 }
 
@@ -72,7 +97,7 @@ async function fetchGeo(city) {
 
 function getCondition(code) {
   if (code === 0) return { label: "Sereno ☀️", bg: "#ffe066" };
-  if (code <= 3) return { label: "Parzialmente nuvoloso ⛅", bg: "#d3d3d3" };
+  if (code <= 3) return { label: "Parzialmente nuvoloso ⛅", bg: "#dce8f5" };
   if (code <= 67) return { label: "Pioggia 🌧️", bg: "#a3c2f2" };
   if (code <= 77) return { label: "Neve ❄️", bg: "#ffffff" };
   return { label: "Temporale ⛈️", bg: "#b0b0b0" };
