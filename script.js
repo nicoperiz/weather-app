@@ -130,7 +130,7 @@ async function fetchWeather(lat, lon, cityName, country) {
     });
 
     const forecastHTML = daily.time
-      .slice(1, 6)
+      .slice(1, 7)
       .map((date, i) => {
         const { label: dayLabel } = getCondition(daily.weathercode[i + 1]);
         return `
