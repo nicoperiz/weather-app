@@ -1,7 +1,7 @@
 # Weather App 🌤️
 
 A weather application built with HTML, CSS, and vanilla JavaScript.
-Search any city to get current conditions and a 5-day forecast.
+Search any city to get current conditions and a 6-day forecast.
 
 ## 🚀 Live Demo
 [https://nicoperiz.github.io/weather-app/](https://nicoperiz.github.io/weather-app/)
@@ -10,7 +10,7 @@ Search any city to get current conditions and a 5-day forecast.
 - Automatic weather detection based on your location
 - City search by name
 - Current conditions: temperature, humidity, wind speed
-- 5-day forecast with min/max temperatures
+- 6-day forecast with min/max temperatures
 - Dynamic background color based on weather condition
 - Enter key support
 
