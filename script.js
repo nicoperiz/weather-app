@@ -121,6 +121,13 @@ async function fetchWeather(lat, lon, cityName, country) {
         `&timezone=auto`,
     );
     const data = await response.json();
+
+    // Controlla se la risposta del server è valida
+    if (!data || !data.current || !data.daily) {
+      showError("Servizio meteo non disponibile. Riprova tra poco.");
+      return;
+    }
+
     const current = data.current;
     const daily = data.daily;
     const { label, bg } = getCondition(current.weathercode);
